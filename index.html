@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js"></script>
+    <title>WebDev GUI</title>
+</head>
+<body>
+    <div class="container">
+        <img src="" alt="hoverImage" id="hoverImage">
+        <div class="toolbar-left" id="toolbarLeft">
+            <input type="text" name="search" id="search" placeholder="Search" oninput="searchTag(this)" maxlength=12>
+            <div class="title" onclick="toolbarDisplayBtnClickHandler(this.children[1])">
+                <h4>Structural Tags</h4>
+                <a class="btn"><i class="fas fa-caret-up"></i></a>
+            </div>
+            <div class="toolbar-row">      
+                <div class="tool" id="a"></div>
+                <div class="tool" id="article"></div>
+            </div>
+            <div class="toolbar-row">      
+                <div class="tool" id="aside"></div>
+                <div class="tool" id="br"></div>
+            </div>
+            <div class="toolbar-row">      
+                <div class="tool" id="details"></div>
+                <div class="tool" id="div"></div>
+            </div>
+            <div class="toolbar-row">      
+                <div class="tool" id="h1"></div>
+                <div class="tool" id="h2"></div>
+            </div>
+            <div class="toolbar-row">      
+                <div class="tool" id="h3"></div>
+                <div class="tool" id="h4"></div>
+            </div>
+            <div class="toolbar-row">      
+                <div class="tool" id="h5"></div>
+                <div class="tool" id="h6"></div>
+            </div>
+            <div class="toolbar-row">      
+                <div class="tool" id="header"></div>
+                <div class="tool" id="hgroup"></div>
+            </div>
+            <div class="toolbar-row">      
+                <div class="tool" id="hr"></div>
+                <div class="tool" id="footer"></div>
+            </div>
+            <div class="toolbar-row">      
+                <div class="tool" id="nav"></div>
+                <div class="tool" id="p"></div>
+            </div>
+            <div class="toolbar-row">      
+                <div class="tool" id="section"></div>
+                <div class="tool" id="span"></div>
+            </div>
+            <div class="toolbar-row">      
+                <div class="tool" id="summary"></div>
+            </div>
+            <div class="title" onclick="toolbarDisplayBtnClickHandler(this.children[1])">
+                <h4>Meta Data Tags</h4>
+                <a class="btn"><i class="fas fa-caret-down"></i></a>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="base"></div>
+                <div class="tool" id="basefont"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="link"></div>
+                <div class="tool" id="style"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="title"></div>
+            </div>
+            <div class="title" onclick="toolbarDisplayBtnClickHandler(this.children[1])">
+                <h4>Form Tags</h4>
+                <a class="btn"><i class="fas fa-caret-down"></i></a>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="button"></div>
+                <div class="tool" id="datalist"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="fieldset"></div>
+                <div class="tool" id="form"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="input"></div>
+                <div class="tool" id="keygen"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="label"></div>
+                <div class="tool" id="legend"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="meter"></div>
+                <div class="tool" id="optgroup"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="option"></div>
+                <div class="tool" id="select"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="textarea"></div>
+            </div>
+            <div class="title" onclick="toolbarDisplayBtnClickHandler(this.children[1])">
+                <h4>Formatting Tags</h4>
+                <a class="btn"><i class="fas fa-caret-down"></i></a>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="abbr"></div>
+                <div class="tool" id="acronym"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="address"></div>
+                <div class="tool" id="b"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="bdi"></div>
+                <div class="tool" id="bdo"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="big"></div>
+                <div class="tool" id="blockquote"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="center"></div>
+                <div class="tool" id="cite"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="code"></div>
+                <div class="tool" id="del"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="dfn"></div>
+                <div class="tool" id="em"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="font"></div>
+                <div class="tool" id="i"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="ins"></div>
+                <div class="tool" id="kbd"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="mark"></div>
+                <div class="tool" id="output"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="pre"></div>
+                <div class="tool" id="progress"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="q"></div>
+                <div class="tool" id="rp"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="rt"></div>
+                <div class="tool" id="ruby"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="s"></div>
+                <div class="tool" id="samp"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="small"></div>
+                <div class="tool" id="strike"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="strong"></div>
+                <div class="tool" id="sub"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="sup"></div>
+                <div class="tool" id="tt"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="u"></div>
+                <div class="tool" id="var"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="wbr"></div>
+            </div>
+            <div class="title" onclick="toolbarDisplayBtnClickHandler(this.children[1])">
+                <h4>List Tags</h4>
+                <a class="btn"><i class="fas fa-caret-down"></i></a>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="dd"></div>
+                <div class="tool" id="dir"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="dl"></div>
+                <div class="tool" id="dt"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="li"></div>
+                <div class="tool" id="ol"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="menu"></div>
+                <div class="tool" id="ul"></div>
+            </div>
+            <div class="title" onclick="toolbarDisplayBtnClickHandler(this.children[1])">
+                <h4>Table Tags</h4>
+                <a class="btn"><i class="fas fa-caret-down"></i></a>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="caption"></div>
+                <div class="tool" id="col"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="colgroup"></div>
+                <div class="tool" id="table"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="tbody"></div>
+                <div class="tool" id="td"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="tfoot"></div>
+                <div class="tool" id="thead"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="th"></div>
+                <div class="tool" id="tr"></div>
+            </div>
+            <div class="title" onclick="toolbarDisplayBtnClickHandler(this.children[1])">
+                <h4>Scripting Tags</h4>
+                <a class="btn"><i class="fas fa-caret-down"></i></a>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="noscript"></div>
+                <div class="tool" id="script"></div>
+            </div>
+            <div class="title" onclick="toolbarDisplayBtnClickHandler(this.children[1])">
+                <h4>Embedded Tags</h4>
+                <a class="btn"><i class="fas fa-caret-down"></i></a>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="applet"></div>
+                <div class="tool" id="area"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="audio"></div>
+                <div class="tool" id="canvas"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="embed"></div>
+                <div class="tool" id="figcaption"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="figure"></div>
+                <div class="tool" id="frame"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="frameset"></div>
+                <div class="tool" id="iframe"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="img"></div>
+                <div class="tool" id="map"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="noframes"></div>
+                <div class="tool" id="object"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="param"></div>
+                <div class="tool" id="source"></div>
+            </div>
+            <div class="toolbar-row hidden">
+                <div class="tool" id="time"></div>
+                <div class="tool" id="video"></div>
+            </div>
+        </div>
+        <div class="root-container">            
+            <div id="root">
+                <h1>hello</h1><br>
+                <h2>hello</h2><br>
+                <h3>hello</h3><br>
+                <h4>hello</h4><br>
+                <h5>hello</h5><br>
+            </div>
+        </div>
+        <div class="toolbar-right">
+            
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/d4da8c3236.js"></script>
+</body>
+</html>

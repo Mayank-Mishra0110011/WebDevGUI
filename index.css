@@ -1,0 +1,122 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	position: relative;
+}
+
+.toolbar-left {
+	width: 20vw;
+	height: 100vh;
+	display: flex 1 1 auto;
+	flex-direction: column;
+	overflow-y: auto;
+	background-color: #353839;
+	overflow-x: hidden;
+	user-select: none;
+	font-family: 'Montserrat', sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+.title {
+	cursor: pointer;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	background-color: black;
+	color: white;
+	border-bottom: 2px solid #353839;
+}
+
+.toolbar-row {
+	height: 50px;
+	display: flex;
+	transition-duration: 0.1s;
+}
+
+.tool {
+	width: 50%;
+	cursor: grab;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: gray;
+	color: black;
+	border: 2px solid #353839;
+}
+
+.tool:hover {
+	background-color: black;
+	color: white;
+}
+
+.toolbar-right {
+	width: 20vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	overflow-y: scroll;
+}
+
+.root-container {
+	width: 60vw;
+	height: 100vh;
+	background-color: brown;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#search {
+	width: 100%;
+	height: 3rem;
+	font-size: 1.2em;
+	padding-left: 1rem;
+	overflow: hidden;
+	background-color: aliceblue;
+	border: 1px solid#ffb6c1;
+}
+
+#root {
+	width: 85%;
+	height: 85%;
+	background-color: white;
+	margin: 8px;
+	display: block;
+	overflow: scroll;
+}
+
+#root > *:hover {
+	background-color: lightblue;
+	cursor: default;
+}
+
+.btn {
+	margin-left: 2rem;
+	color: white;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.hidden {
+	height: 0;
+	visibility: hidden;
+}
+
+.visible {
+	height: 50px;
+	visibility: visible;
+}
+
+#hoverImage {
+	position: fixed;
+	width: 0;
+	height: 0;
+	visibility: hidden;
+}
